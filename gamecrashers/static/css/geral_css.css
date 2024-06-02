@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #062233;
+}
+
+header {
+    width: 100%;
+    position: fixed; /* Fixa o cabeçalho na tela */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #243a48;
+    color: #fff;
+    padding: 1rem 2rem;
+    z-index: 9999;
+}
+
+.logo img {
+    max-width: 40px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+   
+}
+
+.nav-button:not(:last-child):not(#moreButton) {
+    border-right: 1px solid #fff;
+}
+
+
+.more-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0; /* Posiciona a lista no canto direito */
+    width: 200px; /* Defina a largura da lista conforme necessário */
+    background-color: #243a48;
+    z-index: 999;
+}
+
+.more-nav.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.more-nav .nav-button {
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+.more-nav .nav-button:last-child {
+    border-right: none;
+}
+
+
+.nav-button:hover {
+    background-color: #fff;
+    color: #243a48;
+    transform: scale(1.01);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #243a48;
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+}
+.footer-button {
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.footer-button:not(:last-child) {
+    border-right: 1px solid #fff;
+}
+
+.footer-button:hover {
+    background-color: #fff;
+    color: #243a48;
+    transform: scale(1.01);
+}
+
+.footer-info {
+    display: flex;
+    gap: 2rem;
+}

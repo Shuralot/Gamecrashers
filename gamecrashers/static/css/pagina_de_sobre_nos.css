@@ -1,0 +1,20 @@
+
+.content {
+    padding-top: 100px; /* Espaço para evitar sobreposição com o cabeçalho fixo */
+    text-align: center;
+    padding: 2rem;
+}
+
+.texto {
+    background-color: #fff; /* Fundo branco */
+    color: #000; /* Texto preto */
+    padding: 1rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto; /* Centraliza o contêiner */
+    margin-top: 4rem; /* Adiciona espaço acima do contêiner */
+}
+
+
+

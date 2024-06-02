@@ -1,0 +1,45 @@
+
+.content {
+    padding-top: 100px; /* Espaço para evitar sobreposição com o cabeçalho fixo */
+    text-align: center;
+    padding: 2rem;
+}
+
+.team-list-container {
+    background-color: #fff; /* Fundo branco */
+    color: #000; /* Texto preto */
+    padding: 1rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto; /* Centraliza o contêiner */
+    margin-top: 4rem; /* Adiciona espaço acima do contêiner */
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-item {
+    background-color: #243a48;
+    color: #fff;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team-item div {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #fff; /* Linha entre os nomes dos participantes */
+}
+
+.team-item div:last-child {
+    border-right: none; /* Remove a última linha à direita */
+}

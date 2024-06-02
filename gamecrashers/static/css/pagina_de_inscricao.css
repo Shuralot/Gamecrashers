@@ -1,0 +1,66 @@
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/images.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg, rgba(6, 34, 51, 0.8) 50%, rgba(6, 34, 51, 0) 50%);
+}
+
+.registration-form {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    background-color: #fff; /* Cor de fundo branca */
+    color: #062233; /* Cor do texto */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 60%; /* Ajuste da largura para deixar o formulário mais fino */
+    max-width: 400px; /* Ajuste da largura máxima */
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #000; /* Contorno preto */
+    border-radius: 5px;
+    margin-top: 0.25rem;
+    color: #000; /* Cor do texto dentro do campo */
+    background-color: #fff; /* Cor de fundo dos campos de entrada */
+}
+
+.submit-button {
+    background-color: #243a48;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #062233;
+}

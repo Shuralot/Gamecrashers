@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMERCRASHERS - Inscritos</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pagina_inscritos.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/geral_css.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{% url 'paginaPrincipal' %}"><img src="{% static 'img/G.png' %}" alt="Imagem 1"></a>
+        </div>
+        <nav>
+            <a href="{% url 'paginaInscricao' %}" class="nav-button">Me Inscrever</a>
+            <a class="nav-button" id="moreButton">Mais</a>
+            <div class="more-nav" id="moreNav">
+                <a href="mailto:suporte.gamercrashers@gmail.com" class="nav-button">Suporte</a>
+                <a href="{% url 'paginaAboutUs' %}" class="nav-button">Sobre nós</a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <div class="team-list-container">
+            <h1>Times Inscritos</h1>
+            <div class="team-list">
+                <!-- Conteúdo da lista de times será inserido aqui pelo JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/pagina_inscritos.js' %}"></script>
+    <script src="{% static 'js/geral_js.js' %}"></script>
+</body>
+</html>

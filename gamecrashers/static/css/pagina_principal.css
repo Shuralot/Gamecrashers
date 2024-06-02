@@ -1,0 +1,125 @@
+.top-section {
+    background-image: url('../img/capa.png');
+    position: relative; /* Define posição relativa para poder posicionar o degradê */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    transition: opacity 0.5s ease; /* Apenas a opacidade é afetada */
+}
+
+.top-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(6, 34, 51, 0.1), rgba(6, 34, 51, 0.6));
+}
+
+.top-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade conforme necessário */
+    z-index: 1;
+}
+
+.top-section img {
+    max-width: 80%;
+    height: auto;
+    z-index: 2; /* Certifique-se de que a imagem esteja acima da camada de escurecimento */
+}
+
+.top-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    z-index: 2; /* Certifique-se de que o texto esteja acima da camada de escurecimento */
+}
+
+.top-section p {
+    margin-top: 1rem;
+    z-index: 2; /* Certifique-se de que o texto esteja acima da camada de escurecimento */
+}
+
+.top-section, .container {
+    transition: opacity 0.5s ease;
+}
+
+.top-section, .container {
+    opacity: 0;
+    pointer-events: none; /* Impede interações quando invisível */
+}
+
+.top-section.visible, .container.visible {
+    opacity: 1;
+    pointer-events: auto; /* Permite interações quando visível */
+}
+
+.container {
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    transition: opacity 0.8s ease; /* Apenas a opacidade é afetada */
+}
+
+.game-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Espaço entre a imagem do jogo e o texto */
+}
+
+.game-info img {
+    max-width: 50%; /* Ajustando a largura máxima da imagem */
+    height: auto;
+    margin-right: 1rem; /* Espaço entre a imagem e o texto */
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.game-info.visible img {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.text {
+    flex: 1; /* Ocupa o restante do espaço disponível */
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: transform 0.5s ease 0.2s, opacity 0.5s ease 0.2s; /* Delay para o texto aparecer depois da imagem */
+}
+
+.game-info.visible .text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.subscribe-button {
+    background-color: #243a48;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.5s ease 0.4s, opacity 0.5s ease 0.4s; /* Delay para o botão aparecer depois do texto */
+    margin-top: 1rem; /* Espaço entre o texto e o botão */
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.game-info.visible .subscribe-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.subscribe-button:hover {
+    background-color: #062233;
+}

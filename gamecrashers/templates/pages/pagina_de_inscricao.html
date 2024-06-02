@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMERCRASHERS</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pagina_de_inscricao.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/geral_css.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{% url 'paginaPrincipal' %}"><img src="{% static 'img/G.png' %}" alt="Imagem 1"></a>
+        </div>
+        <nav>
+            <a href="{% url 'paginaIncritos' %}" class="nav-button">Participantes</a>
+            <a class="nav-button" id="moreButton">Mais</a>
+            <div class="more-nav" id="moreNav">
+                <a href="mailto:suporte.gamercrashers@gmail.com" class="nav-button">Suporte</a>
+                <a href="{% url 'paginaAboutUs' %}" class="nav-button">Sobre nós</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="background">
+        <div class="gradient-overlay"></div>
+
+            <div class="registration-form">
+                <h1>Inscrição para o Campeonato</h1>
+                <form action="submit_inscricao.php" method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome do representante:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Nome do Time:</label>
+                        <input type="text" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Membros:</label>
+                        <input type="text" id="Membros" name="time" required>
+                    </div>
+                    <button type="submit" class="submit-button">Inscrever-se</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/geral_js.js' %}"></script>
+</body>
+</html>
